@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Menentukan karakter encoding agar teks Indonesia dan simbol terbaca dengan benar -->
+    <meta charset="UTF-8">
+    <!-- Mengatur viewport agar tampilan web responsif di berbagai ukuran layar (HP & Desktop) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Web Sederhana</title>
+    <!-- Menghubungkan file HTML dengan file CSS eksternal -->
+    <link rel="stylesheet" href="modul4_no1_.css">
+</head>
+<body>
+
+    <!-- Bagian Header (Kepala Halaman) -->
+    <header>
+        <!-- Judul utama website -->
+        <h1>BLOG TEKNOLOGI</h1>
+        <!-- Navigasi menu tautan halaman -->
+        <nav>
+            <a href="#artikel">Artikel</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- Bagian Konten Utama -->
+    <main>
+        <!-- Artikel Konten -->
+        <article id="artikel">
+            <h2>MENGENAL PEMROGRAMAN WEB</h2>
+            <p>HTML, CSS, dan JavaScript adalah tiga fondasi utama dalam pemrograman web.</p>
+        </article>
+
+        <!-- Seksi Formulir Kontak -->
+        <section id="kontak">
+            <h2>HUBUNGI KAMI</h2>
+            <!-- Form input dengan ID untuk ditangkap oleh JavaScript -->
+            <form id="formKontak">
+                <!-- Input Nama -->
+                <input type="text" id="nama" placeholder="Nama">
+                <span class="error" id="errNama"></span> <!-- Tempat pesan error nama -->
+
+                <!-- Input Email -->
+                <input type="email" id="email" placeholder="Email">
+                <span class="error" id="errEmail"></span> <!-- Tempat pesan error email -->
+
+                <!-- Input Pesan -->
+                <textarea id="pesan" rows="4" placeholder="Pesan"></textarea>
+                <span class="error" id="errPesan"></span> <!-- Tempat pesan error pesan -->
+
+                <!-- Tombol Submit -->
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Bagian Footer (Bawah Halaman) -->
+    <footer>
+        <p>Hak Cipta &copy; 2024</p>
+    </footer>
+
+    <!-- Menghubungkan file JavaScript eksternal di akhir body agar HTML dimuat terlebih dahulu -->
+    <script src="modul4_no1_.js"></script>
+
+</body>
+</html>

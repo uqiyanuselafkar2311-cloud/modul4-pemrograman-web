@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Menentukan karakter encoding -->
+    <meta charset="UTF-8">
+    <!-- Mengatur viewport agar tampilan web responsif -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Kirim Pesan</title>
+    <!-- Menggunakan file CSS yang sama agar tampilan konsisten -->
+    <link rel="stylesheet" href="modul4_no1_.css">
+</head>
+<body>
+
+    <!-- Header Halaman Hasil -->
+    <header>
+        <h1>Blog Teknologi</h1>
+    </header>
+
+    <!-- Konten Utama Halaman Hasil -->
+    <main>
+        <article>
+            <h2>Pesan Berhasil Terkirim!</h2>
+            <p>Berikut adalah rincian data yang Anda kirimkan:</p>
+            <br>
+            <!-- Elemen span dengan ID untuk menampung data dari localStorage -->
+            <p><strong>Nama:</strong> <span id="tampilNama"></span></p>
+            <p><strong>Email:</strong> <span id="tampilEmail"></span></p>
+            <p><strong>Pesan:</strong> <span id="tampilPesan"></span></p>
+            <br>
+            <!-- Tombol untuk kembali ke halaman utama -->
+            <a href="modul4_no1_.html" style="display:inline-block; padding:10px; background:#4CAF50; color:white; text-decoration:none; border-radius:4px;">Kembali ke Utama</a>
+        </article>
+    </main>
+
+    <!-- Footer Halaman Hasil -->
+    <footer>
+        <p>Hak Cipta &copy; 2024</p>
+    </footer>
+
+    <!-- Script JavaScript untuk mengambil dan menampilkan data dari localStorage -->
+    <script>
+        // Mengambil data yang tersimpan di localStorage dari halaman sebelumnya
+        const nama = localStorage.getItem("nama");
+        const email = localStorage.getItem("email");
+        const pesan = localStorage.getItem("pesan");
+
+        // Menampilkan data yang diambil ke dalam elemen span HTML
+        document.getElementById("tampilNama").textContent = nama || "-";
+        document.getElementById("tampilEmail").textContent = email || "-";
+        document.getElementById("tampilPesan").textContent = pesan || "-";
+    </script>
+</body>
+</html>

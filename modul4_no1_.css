@@ -1,0 +1,115 @@
+/* Mengatur box-sizing agar padding dan border tidak menambah lebar elemen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur font dasar dan warna latar belakang seluruh halaman */
+body {
+    font-family: 'kkk';
+    color: #fefeff;
+    background: #4560a9;
+}
+
+/* Mengatur tata letak header menggunakan Flexbox agar judul dan menu berada di kiri-kanan */
+header {
+    background: #0a1d4e;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Mengatur gaya link pada menu navigasi */
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Menghilangkan garis bawah tautan */
+    margin-left: 15px;
+    transition: color 0.3s, font-size 0.2s; /* Memberikan efek transisi halus saat dipencet/dihover */
+}
+
+/* Efek CSS hover: Mengubah warna teks menu saat kursor mengarah padanya */
+nav a:hover {
+    color: #4CAF50;
+}
+
+/* Mengatur lebar maksimal dan posisi konten utama di tengah halaman */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Memberikan gaya berupa kotak putih bertepi melengkung pada artikel dan form */
+article, section {
+    background: rgb(106, 160, 201);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Mengatur jarak di atas judul Hubungi Kami */
+#kontak h2 {
+    margin-top: -10px; /* Nilai minus (-) akan menaikkan posisi teks ke atas */
+    margin-bottom: 10px; /* Kamu bisa ubah angkanya sesuai kebutuhan, misal 15px atau 20px */
+}
+
+/* Mengatur elemen form agar tersusun secara vertikal (ke bawah) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Jarak antar elemen input */
+}
+
+/* Mengatur gaya kotak input dan textarea */
+input, textarea {
+    padding: 10px;
+    border: 1px solid #fefeff;
+    border-radius: 4px;
+}
+
+/* Mengatur gaya tombol kirim */
+button {
+    font-family: 'kkk';
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Mengatur warna pesan error validasi menjadi merah */
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Mengatur tampilan footer */
+footer {
+    background: #0a1d4e;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+}
+
+/* Aturan Responsif (Media Query) untuk layar seluler / layar kecil (maksimal 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Mengubah susunan header menjadi vertikal */
+        gap: 10px;
+    }
+    nav a {
+        margin: 0 8px;
+    }
+}
+
+@font-face {
+    font-family: 'kkk';
+    src: url('VCR_OSD_MONO_1.001.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
